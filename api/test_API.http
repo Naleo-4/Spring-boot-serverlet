@@ -1,0 +1,33 @@
+### Find all
+GET http://localhost:8080/api/students
+
+### Find by id
+GET http://localhost:8080/api/students/2
+
+###
+#GET http://localhost:8080/api/students/99
+
+###
+POST http://localhost:8080/api/students/
+Content-Type: application/json
+
+{
+  "id": 5,
+  "name": "dog"
+}
+
+###
+PUT http://localhost:8080/api/students/1
+Content-Type: application/json
+
+{
+  "name": "cat"
+}
+
+###
+DELETE http://localhost:8080/api/students/1
+Content-Type: application/json
+
+{
+  "name": "cat"
+}

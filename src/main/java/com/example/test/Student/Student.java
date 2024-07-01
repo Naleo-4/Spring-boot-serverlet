@@ -3,6 +3,7 @@ package com.example.test.Student;
 import jakarta.persistence.*;
 import lombok.Getter;
 import lombok.Setter;
+
 @Getter
 @Setter
 @Entity(name = "student")
@@ -12,9 +13,17 @@ public class Student {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "id")
-    int Id;
+    private int id;
 
     @Column(name = "name")
-    String Name;
+    private String name;
 
+//    public Student(String name, Integer id) {
+//        name = name;
+//        id = id;
+//    }
+//
+//    public Student() {
+//
+//    }
 }

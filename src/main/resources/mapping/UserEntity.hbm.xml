@@ -1,0 +1,22 @@
+<!DOCTYPE hibernate-mapping PUBLIC
+        "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+        "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+    <class name="com.example.test.User.dbo.User" schema="TESTful_API" table="user">
+        <id name="id" type="int" column="id" > 
+            <generator class="identity"/>
+        </id>
+
+        <property name="name" column="name"/>
+        <property name="username" column="user_name"/>
+        <property name="email" column="email"/>
+
+        <one-to-one name="address" class="com.example.test.User.dbo.Address"/>
+
+        <property name="phone" column="phone"/>
+        <property name="website" column="website"/>
+
+        <one-to-one name="company" class="com.example.test.User.dbo.Company"/>
+    </class>
+</hibernate-mapping>
